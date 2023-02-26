@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <title>Witaj &Sacute;wiecie!</title> <!--tytuł strony na pasku lub karcie, w przeglądarce-->
+    <meta charset="utf-8">
+    <meta name="description" content="Testowe skrypty .js w celach ogólnorozwojowych">
+    <meta name="keywords" content="program, html, css, javascript, testy">
+    <meta name="author" content="tetkris - programista">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="arkusz.css">
+
+</head>
+
+<body>
+    <h1>Sprawdź swoje BMI.</h1>
+    <hr>
+    <p>stara ale jeszcze sie jara</p>
+
+
+    <p id="demo">&nbsp;</p>
+    <script type="text/javascript">// <![CDATA[
+        document.getElementById("demo").innerHTML = twojeBmi();
+// ]]></script>
+    <form action="formularz.php"><label
+            title="Podaj swoją wagę, zamiast przecinka użyj kropki jeśli chcesz wpisać dokładną wagę" for="fname">Twoja
+            waga: </label><br /> <input id="fname"
+            title="Podaj swoją wagę, zamiast przecinka użyj kropki jeśli chcesz wpisać dokładną wagę" type="text"
+            name="fname" /><br /> <label title="Podaj sw&oacute;j wzrost, z dokładnością do liczby całkowitej"
+            for="lname">Tw&oacute;j wzrost:</label><br /> <input id="lname"
+            title="Podaj sw&oacute;j wzrost, z dokładnością do liczby całkowitej" type="text" name="lname" /><br />
+        <br /> <input style="color: red;" type="submit" value="Oblicz BMI" />&nbsp;</form>
+    <p><br />
+        <script type="text/javascript" src="skrypt.js"></script>
+        <br /> <br /> <img src="1.png" alt="tabela_BMI" width="300" height="300" />
+    </p>
+    <p>&nbsp;</p>
+    <p><a href="http://tetkris.cba.pl/">Testowy link do testowej strony.</a></p>
+    
+</body>
+
+</html>

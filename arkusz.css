@@ -1,0 +1,20 @@
+ 
+        h1 {
+            background-color:yellow;
+            font-size:77px;
+            font-family:courier;
+            color: green;
+            }
+            
+    
+        body {
+            background-color:powderblue;
+            font-family:courier;
+            color: blue;
+            font-size: 120%;
+        }
+        p {
+            color: green;
+            font-size:140%;
+        }
+    
