@@ -2,7 +2,7 @@ var waga = prompt("Podaj swoją wage: ");
     console.log(waga);
 var wzrost = prompt("Podaj swój wzrost: ");
     console.log(wzrost);
-var number = 201;
+
 var BMI = ((waga / (wzrost * wzrost)) * 10000);
     
     function podajWage(){
