@@ -1,55 +1,32 @@
-var waga = prompt("Podaj swoją wagę: ");
-console.log(waga);
-var wzrost = prompt("Podaj swój wzrost: ");
-console.log(wzrost);
+function calculateBMI() {
+    var waga = document.getElementById('weight').value;
+    var wzrost = document.getElementById('height').value;
+    var BMI_raw = ((waga / (wzrost * wzrost)) * 10000);
+    var BMI = Math.round(BMI_raw * 10) / 10;
 
-var BMI_raw = ((waga / (wzrost * wzrost)) * 10000);
-var BMI = Math.round(BMI_raw * 10) / 10;
-    
-function podajWage(){
-    return "Twoja waga to: " + waga + " kg.<br>";
-}
-console.log("Twoja waga to: " + waga + "kg.");
-  
-function podajWzrost(){
-    return "Twój wzrost to: " + wzrost + " cm.<br>";
-}
-console.log("Twój wzrost to: " + wzrost + " cm.");
-    
-function twojeBmi(){
-    return "<b>Twoje BMI wynosi: </b>" + BMI;
-}
-console.log("Twoje BMI wynosi: " + BMI);
+    var result = "Twoja waga to: " + waga + " kg.<br>" + "Twój wzrost to: " + wzrost + " cm.<br>" + "Twoje BMI wynosi: " + BMI;
 
-document.write(podajWage());
-document.write(podajWzrost());
-document.write(twojeBmi()); 
+    if (BMI < 16){
+        result += "<br><h3>Anoreksja<h3>";
+    } else if (BMI > 16 && BMI <= 16.9){
+        result += "<br>Wychudzenie.";
+    } else if (BMI > 17 && BMI <= 18.5){
+        result += "<br>Niedowaga";
+    } else if (BMI > 18.5 && BMI <= 24.9){
+        result += "<br>Waga prawidłowa";
+    } else if (BMI > 25.0 && BMI <= 29.9){
+        result += "<br>Nadwaga";
+    } else if (BMI > 30 && BMI <= 34.9){
+        result += "<br>Otyłość I stopnia";
+    } else if (BMI > 35.0 && BMI <= 39.9){
+        result += "<br>Otyłość II stopnia";
+    } else if (BMI >= 40) {
+        result += "<br>Otyłość III stopnia";
+    }
 
-if (BMI < 16){
-    document.write("<br><h3>Anoreksja<h3>");
-    console.log()
+    document.getElementById('demo').innerHTML = result;
 }
-else if (BMI > 16 && BMI <= 16.9){
-    document.write("<br>Wychudzenie.");
-}
-else if (BMI > 17 && BMI <= 18.5){
-    document.write("<br>Niedowaga");
-}
-else if (BMI > 18.5 && BMI <= 24.9){
-    document.write("<br>Waga prawidłowa");
-}
-else if (BMI > 25.0 && BMI <= 29.9){
-    document.write("<br>Nadwaga");
-}
-else if (BMI > 30 && BMI <= 34.9){
-    document.write("<br>Otyłość I stopnia");
-}
-else if (BMI > 35.0 && BMI <= 39.9){
-    document.write("<br>Otyłość II stopnia");
-}
-else if (BMI >= 40) {
-    document.write("<br>Otyłość III stopnia");
-}
+
 
       /*
      * <16,0 anoreksja
